@@ -34,3 +34,12 @@ To run the project locally, follow these steps:
 2. Install the dependencies:
    ```bash
    npm install
+3. To start the application locally, run:
+    ```bash
+    npm start
+
+## Running Tests
+
+To run the unit tests, use the following command:
+    ```bash
+    npm test
