@@ -20,7 +20,7 @@ function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Reseta o scroll para o topo da página
+    window.scrollTo(0, 0);
   }, [location]);
 
   return null;

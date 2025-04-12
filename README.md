@@ -37,9 +37,18 @@ To run the project locally, follow these steps:
 3. To start the application locally, run:
     ```bash
     npm start
-
+    
 ## Running Tests
 
 To run the unit tests, use the following command:
+   
     ```bash
     npm test
+
+## Building the Project
+
+To build the project for production, run:
+    ```bash
+    npm run build
+
+This command will also run the tests before finish building the project.
