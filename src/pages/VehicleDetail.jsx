@@ -37,9 +37,6 @@ export function VehicleDetail() {
     {"Date Of Registration": car.details.ownership.dateOfRegistration},
   ]
 
-  console.log(car.details.equipment);
-  
-
   return (
     <main>
       <TopBar>
