@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useLocation } from "react-router-dom";
+import { Header, Footer } from "./components";
+import { AllRoutes } from "./routes/AllRoutes";
+import { createGlobalStyle } from "styled-components";
 
-function App() {
+export default function App() {
+
+  const location = useLocation();
+  const isBannerPage = location.pathname === "/";
+
   return (
+    <>
+    <GlobalStyle/>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header $isOverlay={isBannerPage}/>
+      <AllRoutes />
+      <Footer />
     </div>
+    </>
   );
 }
 
-export default App;
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+`;
